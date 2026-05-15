@@ -1,0 +1,13 @@
+node_modules
+.env
+.env.*
+.git
+.gitignore
+server/dev-data.json
+server/sheet-id.txt
+server/*.bak
+*.json
+!package.json
+!package-lock.json
+terminals
+agent-transcripts

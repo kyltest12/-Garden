@@ -1,0 +1,769 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  color: #1e261d;
+  background: #eef4ea;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.auth-screen {
+  display: grid;
+  place-items: center;
+  width: min(100% - 24px, 520px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 28px 0;
+}
+
+.auth-card {
+  width: 100%;
+  padding: 22px;
+  border: 3px solid #1e261d;
+  background: #fff;
+}
+
+.auth-header {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.auth-header p {
+  margin: 0;
+  color: #4c6045;
+  line-height: 1.4;
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.auth-tab {
+  border: 2px solid #b6c5ad;
+  padding: 10px 12px;
+  background: #f8fbf5;
+  color: #1e261d;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-tab.is-active {
+  border-color: #2e6b2f;
+  background: #edf8e8;
+}
+
+.auth-form {
+  display: grid;
+  gap: 12px;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 6px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #b6c5ad;
+  background: #fff;
+}
+
+.page {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0;
+  flex: 1;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+h1 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.1;
+}
+
+.balance {
+  min-width: 150px;
+  padding: 12px 16px;
+  border: 2px solid #1e261d;
+  background: #fff;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.user-chip {
+  min-width: 150px;
+  padding: 12px 16px;
+  border: 2px solid #2e6b2f;
+  background: #edf8e8;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.small-button {
+  border: 2px solid #1e261d;
+  padding: 10px 12px;
+  background: #fff;
+  color: #1e261d;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.small-button:disabled {
+  border-color: #9fac98;
+  color: #6f7b6a;
+  cursor: not-allowed;
+}
+
+.small-button.danger {
+  border-color: #7a2518;
+  color: #7a2518;
+}
+
+.sound-toggle {
+  min-width: 112px;
+  border-color: #2e6b2f;
+  background: #edf8e8;
+}
+
+.sound-toggle.is-muted {
+  border-color: #7a2518;
+  background: #fff;
+  color: #7a2518;
+}
+
+.shop {
+  border: 3px solid #1e261d;
+  background: #fff;
+  padding: 18px;
+  margin-bottom: 22px;
+}
+
+.shop-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 24px;
+  align-items: start;
+}
+
+.plants {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.plants-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.plants-title {
+  display: grid;
+  gap: 4px;
+}
+
+.plants-header h2 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.shop-timer {
+  margin: 0;
+  color: #4c6045;
+  font-weight: 700;
+}
+
+.toggle-plants {
+  border: 2px solid #2e6b2f;
+  padding: 9px 12px;
+  background: #edf8e8;
+  color: #1e261d;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.plants-panel.is-collapsed .plants {
+  display: none;
+}
+
+.plant-option {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  min-height: 210px;
+  padding: 14px;
+  border: 2px solid #b6c5ad;
+  background: #f8fbf5;
+  cursor: pointer;
+}
+
+.plant-option:has(input:checked) {
+  border-color: #2e6b2f;
+  background: #edf8e8;
+}
+
+.plant-option.is-rare {
+  border-color: #d7a026;
+  background: #fff8df;
+}
+
+.plant-option.is-rare:has(input:checked) {
+  border-color: #8f5d20;
+  background: #ffeab0;
+}
+
+.plant-option img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+.plant-option input {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.plant-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.plant-meta {
+  margin: 0;
+  color: #4c6045;
+  text-align: center;
+}
+
+.plant-stock {
+  margin: 0;
+  padding: 4px 8px;
+  background: #edf8e8;
+  color: #1e261d;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.buy-panel {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border: 2px solid #b6c5ad;
+  background: #f8fbf5;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+label {
+  font-weight: 700;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #b6c5ad;
+  background: #fff;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.button {
+  width: 100%;
+  border: 0;
+  padding: 12px 14px;
+  background: #2e6b2f;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button:disabled {
+  background: #9fac98;
+  cursor: not-allowed;
+}
+
+.garden {
+  min-height: 340px;
+  border: 3px solid #1e261d;
+  padding: 18px;
+  background-image: linear-gradient(rgba(22, 39, 20, 0.15), rgba(22, 39, 20, 0.15)), url("assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.garden-tools {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.garden-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(96px, 1fr));
+  gap: 14px;
+}
+
+.garden-cell {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  align-content: center;
+  min-height: 185px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 2px solid rgba(30, 38, 29, 0.35);
+  text-align: center;
+}
+
+.garden-cell.locked {
+  background: rgba(30, 38, 29, 0.72);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.garden-cell.empty-plot {
+  background: rgba(238, 248, 232, 0.9);
+  border-style: dashed;
+}
+
+.garden-plant img {
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+}
+
+.garden-plant p {
+  margin: 0;
+}
+
+.progress {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(30, 38, 29, 0.35);
+  background: #dce7d5;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2e6b2f;
+  transition: width 0.2s linear;
+}
+
+.progress-label {
+  font-size: 13px;
+  color: #4c6045;
+}
+
+.harvest {
+  border: 0;
+  padding: 9px 10px;
+  width: 100%;
+  background: #8f5d20;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.unlock {
+  border: 0;
+  padding: 9px 10px;
+  width: 100%;
+  background: #d7a026;
+  color: #1e261d;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.plot-title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.empty {
+  display: grid;
+  place-items: center;
+  min-height: 295px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.message {
+  min-height: 24px;
+  margin-top: 12px;
+  color: #7a2518;
+  font-weight: 700;
+}
+
+.achievements {
+  margin-top: 22px;
+  border: 3px solid #1e261d;
+  background: #fff;
+  padding: 18px;
+}
+
+.achievements h2 {
+  margin: 0 0 14px;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.achievement {
+  min-height: 118px;
+  padding: 14px;
+  border: 2px solid #b6c5ad;
+  background: #f8fbf5;
+}
+
+.achievement.is-unlocked {
+  border-color: #d7a026;
+  background: #fff8df;
+}
+
+.achievement h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.achievement p {
+  margin: 0;
+  color: #4c6045;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 20px;
+  background: #1e261d;
+  color: #eef4ea;
+  text-align: center;
+}
+
+footer a {
+  display: inline-flex;
+  margin: 10px 5px;
+  vertical-align: middle;
+}
+
+footer img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+footer img:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .page {
+    width: min(920px, calc(100% - 28px));
+  }
+
+  .shop-layout {
+    grid-template-columns: 1fr 250px;
+    gap: 18px;
+  }
+
+  .plants {
+    grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
+    gap: 12px;
+  }
+
+  .plant-option {
+    min-height: 198px;
+    padding: 12px;
+  }
+
+  .plant-option img {
+    width: 84px;
+    height: 84px;
+  }
+
+  .garden-grid {
+    gap: 10px;
+  }
+
+  .garden-cell {
+    min-height: 160px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 760px) {
+
+  .topbar,
+  .shop-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .page {
+    width: min(620px, calc(100% - 20px));
+    padding: 18px 0;
+  }
+
+  .topbar {
+    display: grid;
+    gap: 12px;
+  }
+
+  .top-actions,
+  .garden-tools {
+    justify-content: stretch;
+  }
+
+  .top-actions>*,
+  .garden-tools>* {
+    flex: 1 1 160px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .balance {
+    min-width: 0;
+    font-size: 19px;
+  }
+
+  .user-chip {
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  .sound-toggle {
+    min-width: 0;
+  }
+
+  .shop,
+  .garden,
+  .achievements {
+    padding: 12px;
+    border-width: 2px;
+  }
+
+  .plants-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .toggle-plants,
+  .small-button,
+  .button {
+    min-height: 44px;
+  }
+
+  .plants {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .plant-option {
+    min-height: 184px;
+    padding: 10px;
+    gap: 6px;
+  }
+
+  .plant-option img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .plant-name {
+    font-size: 16px;
+  }
+
+  .plant-meta,
+  .plant-stock {
+    font-size: 12px;
+  }
+
+  .buy-panel {
+    padding: 12px;
+  }
+
+  .garden-grid {
+    grid-template-columns: repeat(5, minmax(46px, 1fr));
+    gap: 6px;
+  }
+
+  .garden-cell {
+    min-height: 116px;
+    padding: 6px;
+    gap: 5px;
+    font-size: 11px;
+  }
+
+  .garden-plant img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .progress-label {
+    font-size: 11px;
+  }
+
+  .harvest,
+  .unlock {
+    padding: 7px 5px;
+    font-size: 11px;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement {
+    min-height: 0;
+  }
+
+  footer {
+    padding: 16px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .page {
+    width: calc(100% - 14px);
+  }
+
+  .auth-screen {
+    width: calc(100% - 14px);
+  }
+
+  .auth-card {
+    padding: 14px;
+    border-width: 2px;
+  }
+
+  .top-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .plants {
+    grid-template-columns: 1fr;
+  }
+
+  .plant-option {
+    min-height: 0;
+    grid-template-columns: 64px 1fr;
+    justify-items: start;
+    align-items: center;
+    text-align: left;
+  }
+
+  .plant-option input {
+    top: 8px;
+    right: 8px;
+  }
+
+  .plant-option img {
+    grid-row: span 5;
+    width: 58px;
+    height: 58px;
+  }
+
+  .plant-name,
+  .plant-meta,
+  .plant-stock {
+    text-align: left;
+  }
+
+  .garden {
+    padding: 8px;
+  }
+
+  .garden-grid {
+    grid-template-columns: repeat(5, minmax(40px, 1fr));
+    gap: 4px;
+  }
+
+  .garden-cell {
+    min-height: 104px;
+    padding: 4px;
+    font-size: 10px;
+  }
+
+  .garden-plant img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .progress {
+    height: 8px;
+  }
+
+  .harvest,
+  .unlock {
+    padding: 6px 3px;
+    font-size: 10px;
+  }
+}

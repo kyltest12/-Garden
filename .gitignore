@@ -1,0 +1,6 @@
+node_modules/
+.env
+server/dev-data.json
+server/sheet-id.txt
+*-f01f9fa139cf.json
+garden-*.json

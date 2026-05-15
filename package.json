@@ -1,0 +1,24 @@
+{
+  "name": "garden-game",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "check": "node --check script.js && node --check server/index.js",
+    "check:sheets": "node server/check-sheets.js",
+    "migrate:local": "node server/migrate-local.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.3",
+    "googleapis": "^144.0.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

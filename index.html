@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сад</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <section id="authScreen" class="auth-screen">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Сад</h1>
+        <p>Войди или создай аккаунт, чтобы сохранять прогресс и статистику.</p>
+      </div>
+
+      <div class="auth-tabs" role="tablist" aria-label="Аккаунт">
+        <button id="showLogin" class="auth-tab is-active" type="button">Вход</button>
+        <button id="showRegister" class="auth-tab" type="button">Регистрация</button>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <label>
+          Логин
+          <input id="loginName" autocomplete="username" required minlength="3" maxlength="24">
+        </label>
+        <label>
+          Пароль
+          <input id="loginPassword" type="password" autocomplete="current-password" required minlength="6">
+        </label>
+        <button class="button" type="submit">Войти</button>
+      </form>
+
+      <form id="registerForm" class="auth-form is-hidden">
+        <label>
+          Логин
+          <input id="registerName" autocomplete="username" required minlength="3" maxlength="24">
+        </label>
+        <label>
+          Никнейм
+          <input id="registerNickname" autocomplete="nickname" required minlength="2" maxlength="24">
+        </label>
+        <label>
+          Пароль
+          <input id="registerPassword" type="password" autocomplete="new-password" required minlength="6">
+        </label>
+        <button class="button" type="submit">Создать аккаунт</button>
+      </form>
+
+      <p id="authMessage" class="message" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <main id="appShell" class="page is-hidden">
+    <header class="topbar">
+      <h1>Сад</h1>
+      <div class="top-actions">
+        <div class="user-chip">Игрок: <span id="userNickname">-</span></div>
+        <div class="balance">Баланс: $<span id="gold">0</span></div>
+        <button id="soundToggle" class="small-button sound-toggle" type="button" aria-pressed="false">Звук: вкл</button>
+        <button id="logoutButton" class="small-button" type="button">Выйти</button>
+        <button id="resetGame" class="small-button danger" type="button">Сброс</button>
+      </div>
+    </header>
+
+    <section class="shop" aria-label="Магазин растений">
+      <form id="shopForm" class="shop-layout">
+        <div id="plantsPanel" class="plants-panel">
+          <div class="plants-header">
+            <div class="plants-title">
+              <h2>Магазин семян</h2>
+              <p class="shop-timer">Обновление через <span id="shopTimer">0 сек</span></p>
+            </div>
+            <button id="togglePlants" class="toggle-plants" type="button" aria-expanded="true"
+              aria-controls="plants">Свернуть растения</button>
+          </div>
+          <div id="plants" class="plants"></div>
+        </div>
+
+        <div class="buy-panel">
+          <div class="field">
+            <label for="count">Количество</label>
+            <input id="count" type="number" min="1" value="1">
+          </div>
+
+          <div class="total">
+            <span>Итого</span>
+            <span>$<span id="total">0</span></span>
+          </div>
+
+          <button class="button" type="submit">Посадить</button>
+          <div id="message" class="message" aria-live="polite"></div>
+        </div>
+      </form>
+    </section>
+
+    <section class="garden" aria-label="Огород">
+      <div class="garden-tools">
+        <button id="harvestAll" class="small-button" type="button">Собрать всё</button>
+      </div>
+      <div id="garden"></div>
+    </section>
+
+    <section class="achievements" aria-label="Достижения">
+      <h2>Достижения</h2>
+      <div id="achievements" class="achievements-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>Создатель: Жирин - Kyltest12</strong></div>
+    <div>
+      Связь:
+      <a href="https://steamcommunity.com/id/kyltest12/" title="Steam">
+        <img src="https://img.icons8.com/?size=100&id=bAueu1nRM1E2&format=png&color=000000" alt="Steam">
+      </a>
+      <a href="https://guns.lol/kyltest12" title="Guns.lol">
+        <img src="https://avatars.githubusercontent.com/u/157977633?s=200&v=4" alt="Guns.lol">
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
