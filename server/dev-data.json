@@ -1,0 +1,168 @@
+{
+  "users": [
+    {
+      "user_id": "3c9111b8-45f3-4065-aaa0-b00fc801d39e",
+      "login": "111",
+      "password_hash": "$2a$12$d49/k17LmY.0VkdUgFe0G.9/HqhGFr1twEIZrlCRh5vWHlCMlk6BO",
+      "nickname": "111111",
+      "created_at": "2026-05-15T17:11:07.866Z",
+      "last_login_at": "2026-05-15T17:11:07.866Z",
+      "last_seen_at": "2026-05-15T17:12:38.436Z",
+      "is_banned": "false"
+    },
+    {
+      "user_id": "1d211582-e7a9-42aa-9447-cb936e9b4eb4",
+      "login": "1111",
+      "password_hash": "$2a$12$tB0XF/l7xggGEkwQFI/or.Iu9xWA8DPuB1mDMsB0eUSrK7ucbBh36",
+      "nickname": "1111111",
+      "created_at": "2026-05-15T17:12:54.297Z",
+      "last_login_at": "2026-05-15T17:12:54.297Z",
+      "last_seen_at": "2026-05-15T17:15:25.339Z",
+      "is_banned": "false"
+    },
+    {
+      "user_id": "b59b9eb2-c025-4815-a120-32d8ae9c309a",
+      "login": "123123",
+      "password_hash": "$2a$12$N6tJNpslinvZsmOhQ1LgQ.ALuFkenY6rL4WuKlImyzd95deWaSs6G",
+      "nickname": "123123",
+      "created_at": "2026-05-15T17:15:54.768Z",
+      "last_login_at": "2026-05-15T17:15:54.768Z",
+      "last_seen_at": "2026-05-15T17:19:46.346Z",
+      "is_banned": "false"
+    }
+  ],
+  "profiles": [
+    {
+      "user_id": "3c9111b8-45f3-4065-aaa0-b00fc801d39e",
+      "nickname": "111111",
+      "gold": 2,
+      "selected_plant": 0,
+      "unlocked_plots_count": 9,
+      "total_harvests": 0,
+      "total_earned": 0,
+      "plants_planted": 0,
+      "plants_harvested": 0,
+      "different_plants_grown": 0,
+      "online_seconds": 60,
+      "last_save_at": "2026-05-15T17:12:38.436Z"
+    },
+    {
+      "user_id": "1d211582-e7a9-42aa-9447-cb936e9b4eb4",
+      "nickname": "1111111",
+      "gold": 2,
+      "selected_plant": 0,
+      "unlocked_plots_count": 9,
+      "total_harvests": 0,
+      "total_earned": 0,
+      "plants_planted": 0,
+      "plants_harvested": 0,
+      "different_plants_grown": 0,
+      "online_seconds": 150,
+      "last_save_at": "2026-05-15T17:15:25.339Z"
+    },
+    {
+      "user_id": "b59b9eb2-c025-4815-a120-32d8ae9c309a",
+      "nickname": "123123",
+      "gold": 0,
+      "selected_plant": 0,
+      "unlocked_plots_count": 9,
+      "total_harvests": 0,
+      "total_earned": 0,
+      "plants_planted": 1,
+      "plants_harvested": 0,
+      "different_plants_grown": 0,
+      "online_seconds": 210,
+      "last_save_at": "2026-05-15T17:19:46.346Z"
+    }
+  ],
+  "saves": [
+    {
+      "user_id": "3c9111b8-45f3-4065-aaa0-b00fc801d39e",
+      "garden_json": "[]",
+      "seed_shop_json": "{\"items\":[{\"plantIndex\":0,\"stock\":8},{\"plantIndex\":1,\"stock\":4},{\"plantIndex\":3,\"stock\":4},{\"plantIndex\":4,\"stock\":2},{\"plantIndex\":5,\"stock\":5},{\"plantIndex\":7,\"stock\":2}],\"nextRefreshAt\":1778865458120}",
+      "stats_json": "{\"totalHarvests\":0,\"totalEarned\":0,\"plantsPlanted\":0,\"plantsHarvested\":0,\"grownPlantIndexes\":[],\"gold\":2,\"selectedPlant\":0,\"unlockedPlots\":[0,1,2,5,6,7,10,11,12]}",
+      "updated_at": "2026-05-15T17:12:38.436Z"
+    },
+    {
+      "user_id": "1d211582-e7a9-42aa-9447-cb936e9b4eb4",
+      "garden_json": "[]",
+      "seed_shop_json": "{\"items\":[{\"plantIndex\":0,\"stock\":8},{\"plantIndex\":1,\"stock\":4},{\"plantIndex\":3,\"stock\":4},{\"plantIndex\":4,\"stock\":2},{\"plantIndex\":5,\"stock\":5},{\"plantIndex\":7,\"stock\":2}],\"nextRefreshAt\":1778865458120}",
+      "stats_json": "{\"totalHarvests\":0,\"totalEarned\":0,\"plantsPlanted\":0,\"plantsHarvested\":0,\"grownPlantIndexes\":[],\"gold\":2,\"selectedPlant\":0,\"unlockedPlots\":[0,1,2,5,6,7,10,11,12]}",
+      "updated_at": "2026-05-15T17:12:54.297Z"
+    },
+    {
+      "user_id": "b59b9eb2-c025-4815-a120-32d8ae9c309a",
+      "garden_json": "[{\"id\":\"58dd0fe6-cc55-422f-8235-abc27111bef1\",\"plantIndex\":0,\"plotIndex\":0,\"readyAt\":1778865565587}]",
+      "seed_shop_json": "{\"items\":[{\"plantIndex\":0,\"stock\":8},{\"plantIndex\":1,\"stock\":3},{\"plantIndex\":2,\"stock\":5},{\"plantIndex\":3,\"stock\":4},{\"plantIndex\":4,\"stock\":2},{\"plantIndex\":7,\"stock\":1}],\"nextRefreshAt\":1778865758200}",
+      "stats_json": "{\"totalHarvests\":0,\"totalEarned\":0,\"plantsPlanted\":1,\"plantsHarvested\":0,\"grownPlantIndexes\":[],\"gold\":0,\"selectedPlant\":0,\"unlockedPlots\":[0,1,2,5,6,7,10,11,12]}",
+      "updated_at": "2026-05-15T17:17:38.516Z"
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "397d99db-2597-4297-a784-f2b48e2edcdb",
+      "user_id": "3c9111b8-45f3-4065-aaa0-b00fc801d39e",
+      "started_at": "2026-05-15T17:11:08.116Z",
+      "last_heartbeat_at": "2026-05-15T17:12:08.346Z",
+      "online_seconds_added": 60
+    },
+    {
+      "session_id": "56908ca4-8f8b-4221-9923-24d6ac6a3141",
+      "user_id": "1d211582-e7a9-42aa-9447-cb936e9b4eb4",
+      "started_at": "2026-05-15T17:12:54.564Z",
+      "last_heartbeat_at": "2026-05-15T17:15:25.339Z",
+      "online_seconds_added": 150
+    },
+    {
+      "session_id": "e74baccf-e447-4d3f-b6eb-eff576bffdcd",
+      "user_id": "b59b9eb2-c025-4815-a120-32d8ae9c309a",
+      "started_at": "2026-05-15T17:15:55.014Z",
+      "last_heartbeat_at": "2026-05-15T17:19:46.346Z",
+      "online_seconds_added": 210
+    }
+  ],
+  "events": [
+    {
+      "event_id": "d16cc9db-6844-44db-b52e-775735953e7c",
+      "user_id": "3c9111b8-45f3-4065-aaa0-b00fc801d39e",
+      "event_type": "register",
+      "event_json": "{\"nickname\":\"111111\"}",
+      "created_at": "2026-05-15T17:11:08.110Z"
+    },
+    {
+      "event_id": "3ec05d9f-b7c6-4c64-9e7d-6c71522a6adb",
+      "user_id": "3c9111b8-45f3-4065-aaa0-b00fc801d39e",
+      "event_type": "save",
+      "event_json": "{\"gold\":2,\"gardenCount\":0,\"totalEarned\":0,\"totalHarvests\":0}",
+      "created_at": "2026-05-15T17:12:38.444Z"
+    },
+    {
+      "event_id": "a73253a3-7fbb-4d18-a224-840e4bb64d97",
+      "user_id": "1d211582-e7a9-42aa-9447-cb936e9b4eb4",
+      "event_type": "register",
+      "event_json": "{\"nickname\":\"1111111\"}",
+      "created_at": "2026-05-15T17:12:54.556Z"
+    },
+    {
+      "event_id": "d14946f9-0e34-4480-b02e-1aa67ecb4818",
+      "user_id": "b59b9eb2-c025-4815-a120-32d8ae9c309a",
+      "event_type": "register",
+      "event_json": "{\"nickname\":\"123123\"}",
+      "created_at": "2026-05-15T17:15:55.009Z"
+    },
+    {
+      "event_id": "8f50431a-13ce-4b33-b667-862c93f05c3a",
+      "user_id": "b59b9eb2-c025-4815-a120-32d8ae9c309a",
+      "event_type": "save",
+      "event_json": "{\"gold\":0,\"gardenCount\":1,\"totalEarned\":0,\"totalHarvests\":0}",
+      "created_at": "2026-05-15T17:16:25.916Z"
+    },
+    {
+      "event_id": "ffa2f55b-a567-4f3a-a3bc-d0a9ed58944e",
+      "user_id": "b59b9eb2-c025-4815-a120-32d8ae9c309a",
+      "event_type": "save",
+      "event_json": "{\"gold\":0,\"gardenCount\":1,\"totalEarned\":0,\"totalHarvests\":0}",
+      "created_at": "2026-05-15T17:17:38.524Z"
+    }
+  ]
+}
